@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+    "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="true" />
+
+	<package name="basicstruts2" extends="struts-default">
+	
+	      <!--   result-types>
+            <result-type name="thymeleaf" class="org.codework.struts.plugins.thymeleaf.ThymeleafResult"/>
+        </result-types  -->
+	
+		<action name="index">
+			<result>/index.html</result>
+		</action>
+
+		<action name="hello" class="helloAction" method="execute">
+		   <result name="success" >/templates/hello.html</result>
+		</action>
+
+		<action name="hello1" class="helloAction" method="execute">
+		   <result name="success" >index.html</result>
+		</action>
+		
+		<action name="readsession" >
+		   <result name="success" >readsession.jsp</result>
+		</action>
+		
+		<action name="writesession" class="com.ecsteam.springbootstruts2oauth.action.WriteAction" method="execute">
+		   <result name="success" >readsession.jsp</result>
+		</action>
+		
+		<action name="deletesession" class="com.ecsteam.springbootstruts2oauth.action.DeleteAction" method="execute">
+		   <result name="success" >readsession.jsp</result>
+		</action>
+		
+		<action name="register" class="registerAction" method="execute">
+			<result name="success">/index.html</result>
+			<result name="input">/index.html</result>
+		</action>
+	</package>
+</struts>

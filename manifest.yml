@@ -1,0 +1,7 @@
+---
+# all applications use these settings and services
+memory: 1G
+instances: 1
+applications:
+- name: springboot-sturts2-oauth
+  path: ./target/springboot-struts2-oauth2-0.0.1-SNAPSHOT.jar
